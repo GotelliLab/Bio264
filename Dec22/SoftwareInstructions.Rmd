@@ -1,0 +1,36 @@
+---
+title: "Instructions For Loading Software"
+author: "Nicholas J. Gotelli"
+date: "December 22, 2015"
+output: html_document
+---
+Here are the software packages you need to load onto your computer for this course. These programs work on Mac or Windows computers. They are free, safe, and do not take up much disk space.
+
+Go to each page, follow the instructions for downloading the installer. Once you have downloaded the package to your desktop or other place on your hard drive, double-click it to begin the installation. The installer will go through a number of steps. Always use the complete installation with the default choices at each step. 
+
+## R
+R is the basic computational language we will use in this class. We will use R not only for coding, but also for taking notes, displaying code, and creating slides and graphs. During the installation, you will need to choose a "mirror", which is simply a local network from which your copy of the R installer will be downloaded. Use any of the major U.S. university sites such as Case Western or Duke. At one point you may be asked whether you are installing on a 32-bit or a 64-bit Windows machine. Use the 32-bit option. For Mac, use the R 3.2.3 package (unless your machine is older). 
+
+[download R](https://www.r-project.org/)
+
+## R Studio
+R studio is an IDE (Integrated Development Environment), which is a special editor that makes it much easier to use R and adds a number of useful features. Make sure you have installed R first before you install R studio. Choose either the Windows or Mac OS installer.
+
+[download R Studio](https://www.rstudio.com/products/rstudio/download/)
+
+## MikTeX
+MikTex is a version of the LaTeX type-setting system. With MikTeX installed, you will be able to create pdf documents using R studio. 
+
+
+
+[download MikTeX 2.95721 Net Installer Windows 32-bit for Windows, third box down from the top](http://miktex.org/2.9/setup)
+
+[download MacTex-2015 (full version, not the "smaller BasicTeX") for Mac](http://tug.org/mactex/)
+
+## Text editors
+We will occasionally need to use a simple plain-text editor, and the editors that are installed by default on your Mac or Windows machines are not useful. There are many good editors out there to choose from, but I recommend downloading and installing one of the following for your computer:
+
+[download medit 1.2.0.exe for Windows](http://sourceforge.net/projects/mooedit/files/)
+
+
+[download TextMate 2.0 beta for Mac](http://macromates.com/download)

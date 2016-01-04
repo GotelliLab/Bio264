@@ -1,0 +1,61 @@
+
+Dear Bio 264 student:
+
+First, congratulations on securing a slot in this class! There are at least a dozen other students who have tried to enroll for this course and were not able to because it filled up so quickly.
+
+The purpose of this e-mail is to provide you with some important details about this class, which is probably very different from most previous classes you have had at UVM. Based on this information, some of you may decide the class is not for you.
+
+This class is called "Community Ecology", but a more accurate title might be "Ecological Modeling with R". To take this class, you MUST have a portable computer (Mac or Windows) with an internet connection and a good battery. You will use your computer every day in class. If you do not have your own computer, you simply cannot take this class and should dis-enroll now, which will free up some space for others who are waiting.
+
+Unlike BCOR 102, this class is definitely not a lecture in which I talk and you take notes. Instead, you will be learning programming in the class and be expected to solve new puzzles, illustrate your code to the class, and think on your feet. There will be a heavy emphasis on statistics, mathematics, and programming, and you will constantly be called on to "stand and deliver". I will be using a random number generator to select students and ask them to provide answers and illustrate their code. You will develop your own modeling project based on published papers from the scientific literature, and near the end of the semester, you will give a presentation on it that will be graded by me and by your fellow classmates.
+
+I think this course will be a lot of fun, but also a lot of work, and it will definitely not be everyone's cup of tea. If you struggled with R programming in the BCOR 102 labs (fall semester), this course probably is not something that you want. Also, your grade will depend in large part on your active class participation. If you are just looking for a class to sit and passively take notes, or if you have anxiety about being called on to speak and answer in class, this may not be what you want. On the other hand, if you are looking for a way to overcome shyness with public speaking, this might be just what you need!
+
+e-mail sent on 19 November 2015
+NAME
+Alger, Bethany J.
+Baum, Jesse L.
+Bergren, Britta C.
+Boudah, Nikki E.
+Brown, Sam T.
+Carroll, Bridget C.
+Cayton, Colby P.
+Chapman, Kari D.
+D'Agostino, Rebecca Y.
+Damon, Chris A.
+DeVito, Breanna M.
+Evans, Corey W.
+Gagnon, Margot A.
+Gambero, Alex M.
+George, Caroline R.
+Grosvenor, Hunter J.
+Haenel, Jordan K.
+Heuss, Molly W.
+Hinckley, Nicholas
+Kala, Muhammad A.
+Ketcham, Mallory A.
+Lebron, Josh E.
+Lee, Meghan R.
+Mehegan, Zack R.
+Miller, Travis D.
+Moore, Brooke E.
+Motley, Kyle J.
+Noel, Adam R.
+O'Malley, Brian P.
+Provencher, Curtis A.
+Sell, Justin M.
+Shaw, Emily E.
+Smolensky, Jason D.
+Viola, Toni E.
+
+In the next few weeks, I will be mailing you some instructions about the software packages you will need (R, RStudio, Medit, Lyx) and how to install them. This software is all free and open source. It will not harm your computer or infect it with spyware or adware. You will need this software installed and working on your computer for the first day of class. Sometimes installing new software can be a headache, but I can meet with you in the days leading up to class if you run into troubles.
+
+Please let me know if you have any questions or concerns.
+
+Best wishes,
+
+Nick Gotelli
+
+
+
+
