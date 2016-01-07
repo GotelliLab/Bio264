@@ -2,7 +2,9 @@
 title: "Instructions For Loading Software"
 author: "Nicholas J. Gotelli"
 date: "December 22, 2015"
-output: html_document
+output: 
+  html_document: 
+    theme: united
 ---
 Here are the software packages you need to load onto your computer for this course. These programs work on Mac or Windows computers. They are free, safe, and do not take up much disk space.
 

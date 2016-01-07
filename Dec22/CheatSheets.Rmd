@@ -1,0 +1,34 @@
+---
+title: "Cheat Sheets & Resources For R Programming"
+author: "Nicholas J. Gotelli"
+date: "January 6, 2016"
+output: 
+  html_document: 
+    theme: united
+---
+
+If you have never used R before, I recommend you work through the beginning tutorial available at DataCamp. Click on "Start Learning R" to begin the free session.
+
+[DataCamp](https://www.datacamp.com/)
+
+## Cheat Sheets
+
+Here is a collection of cheat-sheets and tips for programming and graphics in R. Most of these guides will not make sense in the beginning, but keep returning to them as you learn more R code, and you will start to pick up many useful methods.
+
+[Brewer Color Palettes](Brewer Palettes.pdf)
+
+[Color Chart](ColorChart.pdf)
+
+[R_Cheat_Data](R_Cheat_Data.pdf)
+
+[rmarkdown-cheatsheet](rmarkdown-cheatsheet.pdf)
+
+[rmarkdown-reference](rmarkdown-reference.pdf)
+
+[rstudio-IDE-cheatsheet](rstudio-IDE-cheatsheet.pdf)
+
+[Rtips](Rtips.pdf)
+
+[Short-refcard](Short-refcard.pdf)
+
+[Symbols and Lines](Symbols and Lines.pdf)
