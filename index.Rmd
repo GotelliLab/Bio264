@@ -17,6 +17,6 @@ Welcome to the homepage for Biology 264. Follow the links below each dated post 
 #### 22 December 2015
 [Instructions For Loading Software](Dec22/SoftwareInstructions.html)
 
-[CheatSheets And Resources For R Programming](Dec22/Resources.html)
+[CheatSheets And Resources For R Programming](Dec22/CheatSheets.html)
 
 ****
