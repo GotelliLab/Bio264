@@ -1,0 +1,30 @@
+---
+title: "Bio 264 Personal Pledge"
+author: "Nicholas J. Gotelli"
+date: "January 7, 2016"
+output: pdf_document
+---
+
+- I understand that I must have my own personal computer (Windows or Mac) to take this class, and I must bring my computer to class every day with a fully-charged battery. The computer must have a wireless connection and a USB port, and I must have an active UVM e-mail account to receive important course announcements. I must install the required software (R, RStudio, Miktek, text editor) and have it functional, preferably on the first class meeting, and no later than the start of the second meeting. If I do not have a computer meeting this description, I will have to drop the class.
+
+- I understand that my grade and performance will depend on my active participation and full intellectual engagement in this class. If I don't understand something, I will raise my hand immediately to get help from one of my classmates or from the instructor. If I understand and am keeping up with the material, I will help other people in my group who are struggling. I understand that I will frequently be asked to "think on my feet" and that I may need to dig for answers and search on-line to find answers to some of my programming questions. I understand that part of the course is about discovering new functions and graphics in R, and sharing them with the rest of the class.
+
+- I understand that much of the time in class, we will be writing short coding exercises, and that I will frequently be called on randomly to bring my computer to the front of the room, plug in to the overhead display, and demonstrate my code and answer questions.
+
+- I understand that this course will be engaging and stimulating, but also that it will be a lot more work than most upper division classes at UVM. I also understand that Dr. Gotelli is teaching this course for the very first time, so things will not be as smooth or as well-organized as they were in BCOR 102.
+
+- I understand that there will be daily and weekly homework assignments that must be turned in to the professor on a flashdrive and copied onto his computer before I leave class each day.
+
+- I understand that, when learning a computer language, it is appropriate to learn from others by studying their code and then modifying it and working it into my own programs. However, I also understand that whole-sale cutting and pasting of entire programs is plagarism and will trigger a failing grade.
+
+- I understand that, although roll will not be taken, Professor Gotelli will frequently be calling on students randomly, and that if I am not present when my name is called, I will lose credit towards my final grade.
+
+- I understand that, near the end of the course, each student will be giving a slide show presentation of an individual project based on models and data drawn from the primary scientific literature. To efficiently go through these presentations, I am prepared to meet for a few long evening sessions so that we can hear the talks and have some dinner, just as we would at a real scientific conference.
+
+- I understand that if I work hard and make a real effort to master this material, I will have an experience that is very close to doing "real" science as a graduate student or faculty member. I will also learn how to think more analytically, write and speak with more precision, and use open-source computer tools to produce polished documents and slide presentations. These skills will help me a lot no matter what I choose to do in the future.
+
+### Student Signature:
+
+### Instructor Signature:
+
+### Date:

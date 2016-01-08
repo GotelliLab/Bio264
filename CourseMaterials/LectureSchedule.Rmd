@@ -1,0 +1,42 @@
+---
+title: "Bio 264 Lecture Schedule"
+author: "Nicholas J. Gotelli"
+date: "January 7, 2016"
+output: pdf_document
+---
+
+Date   | Lecture Topic
+------------- | -------------
+Tuesday January 19 | Introduction - Pen and Paper Tools
+Thursday January 21 | Rmarkdown basics - writing tools
+Tuesday January 26 | Rmarkdown basics - code chunks & scripts
+Thursday January 28 | R data structures
+Tuesday February 2 | R control structures
+Thursday February 4 | R functions and pseudocode
+Tuesday February 9 | EXAM I
+Thursday February 11 | R graphics, plotting functions
+Tuesday February 16 | Probability distributions
+Thursday February 18 | Stochastic processes
+Tuesday February  23 | Exponential growth
+Thursday February 25 | Modeling Density dependence
+Tuesday March 1 | town meeting day recess
+Thursday March 3 | EXAM II
+Tuesday March 8 | Spring Break
+Thursday March 10 | Spring Break
+Tuesday March 15 | Two-species models
+Thursday March 17 | guest lecture
+Tuesday March 22 | Two-species models
+Thursday March 24 | Statistics - contingency tables
+Tuesday March 29 | Statistics - regression, anova
+Thursday March 31 | Spatially Explicit Models
+Tuesday April 5 | Individual-based Models
+Thursday April 7 | Markov Models
+Tuesday April 12 | EXAM III
+Thursday April 14 | guest lecture
+Tuesday April 19 | Research Presentations
+Thursday April 21 | Research Presentations
+Tuesday April 26 | Research Presentations
+Thursday April 28 | Research Presentations
+Tuesday May 3 | Research Presentations
+
+
