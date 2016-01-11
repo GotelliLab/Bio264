@@ -1,0 +1,84 @@
+---
+title: " Biology 264 Course Description"
+author: "Nicholas J. Gotelli"
+date: "January 11, 2016"
+output: pdf_document
+---
+
+## Course Content
+
+Biology 264 is "Community Ecology", but a more accurate description might be "Programming Ecological Models in R". In this course, you will learn how to:
+
+- use Markdown, RStudio, and other open-source tools to program ecological models in R, as well as create documents, slide, shows, and formatted computer code in `.html` and `.pdf` format.
+
+- use R to create simple function graphs to help you understand the behavior of differential equations that are commonly used in ecology.
+
+- use probability distributions (normal, uniform, binomial, Poisson, gamma, beta) to build stochastic models and simulate populations and communities.
+
+- use R to understand the structure and analysis of ecological data with core models of regression and ANOVA, and how to visualize and organize ecological data with good graphics.
+
+- learn how to program differential equations of population and community growth, stochastic simulations, Monte Carlo analyses of ecological data, and dynamic Markov models of population and community change.
+
+- develop an independent project from the literature by taking a published paper, programming the models and data it contains, and then extending the ideas in the paper with additional modeling.
+
+- give a polished presentation of your paper in the same format as a scientific meeting.
+
+
+## Course Requirements
+
+- successful completion of BCOR 102 or a comparable course in basic ecology that includes some statistics.
+
+- a personal laptop computer (Mac or Windows), with an internet connection, uvm webmail account, a USB port, and a fully chargable battery. ***You must have your own computer that you can bring to class every single day.***
+
+- required text: Gotelli, N.J. 2008. *A Primer of Ecology*. (4th edition).
+
+## Term Paper
+
+A term paper at the end of the semester will be required. The paper will use one or more published papers to code and duplicate the results, and extend the model or data analysis of the paper with something novel of your own creation.
+
+- 3000 - 4000 words of text (not including computer code)
+- standard scientiific paper format (title, abstract, introduction, methods, results, discussion, literature cited)
+- R code, graphics, and statistical analyses imbedded and formatted in the paper using Rmarkdown and Rstudio
+
+## Class Presentation
+
+Near the end of the semester, you will give a 12-minute slide show presentation with graphics on your project, followed by 3 minutes of questions from the rest of the class.
+
+## Class Structure
+
+This will be a very dynamic, interactive class. A typical class will include:
+
+- formal lectures on ecological theory and computer demonstrations by the instructor
+- working in randomly assembled groups of 4 or 5 on using the computer code and techniques
+- brief presentations by randomly chosen students to illustrate solutions to the in-class problems
+- computer files from in-class assignments turn in on a flash drive at the end of each day
+
+## Weekly Homework and Exams
+
+In addition to in-class assignments, there will be weekly homework assignments, and 3 in-class exams for you to learn how to program. Homework and exam questions will consist of straightforward application of coding methods covered in class to new ecological problems and data.
+
+## Plagarism Policy
+
+Learning how to use a computer language means making liberal use of other people's code and adapting it to your own programs. This is encouraged. However, cutting and pasting whole-sale programs and slapping your name on them as your own is plagarism and is not acceptable.
+
+## Late Policy
+
+Because of the size of this class and the amount of work involved, I am not able to easily to deal with late assignments. Assignments are due at the end of each class day as listed in the syllabus, and I will deduct a full letter grade for each day that an assignment is turned in late. After 48 hours, I cannot give any credit for late assignments. It is especially important that you attend every class because we will be covering a lot of material. You will lose all of the participation points for days that you do not attend.
+
+## Grading
+
+Course grades will be determined from the following components:
+
+
+Activity | Points
+------ | ----------
+Daily Class Participation (~ 10 points/day) | 200
+Exam I | 50
+Exam II | 50
+Exam III | 50
+Weekly Homework | 100
+Term Paper | 150
+Final Presentation | 100
+
+There is no final exam because your term paper and final presentation are due at the end of the semester. 
+

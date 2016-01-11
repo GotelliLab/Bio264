@@ -2,41 +2,43 @@
 title: "Bio 264 Lecture Schedule"
 author: "Nicholas J. Gotelli"
 date: "January 7, 2016"
-output: pdf_document
+output: 
+  pdf_document: 
+    highlight: tango
+fontsize: 10pt
 ---
 
-Date   | Lecture Topic
-------------- | -------------
-Tuesday January 19 | Introduction - Pen and Paper Tools
-Thursday January 21 | Rmarkdown basics - writing tools
-Tuesday January 26 | Rmarkdown basics - code chunks & scripts
-Thursday January 28 | R data structures
-Tuesday February 2 | R control structures
-Thursday February 4 | R functions and pseudocode
-Tuesday February 9 | EXAM I
-Thursday February 11 | R graphics, plotting functions
-Tuesday February 16 | Probability distributions
-Thursday February 18 | Stochastic processes
-Tuesday February  23 | Exponential growth
-Thursday February 25 | Modeling Density dependence
-Tuesday March 1 | town meeting day recess
-Thursday March 3 | EXAM II
-Tuesday March 8 | Spring Break
-Thursday March 10 | Spring Break
-Tuesday March 15 | Two-species models
-Thursday March 17 | guest lecture
-Tuesday March 22 | Two-species models
-Thursday March 24 | Statistics - contingency tables
-Tuesday March 29 | Statistics - regression, anova
-Thursday March 31 | Spatially Explicit Models
-Tuesday April 5 | Individual-based Models
-Thursday April 7 | Markov Models
-Tuesday April 12 | EXAM III
-Thursday April 14 | guest lecture
-Tuesday April 19 | Research Presentations
-Thursday April 21 | Research Presentations
-Tuesday April 26 | Research Presentations
-Thursday April 28 | Research Presentations
-Tuesday May 3 | Research Presentations
-
+Date   | Lecture Topic | Assignments Due
+------------- | ------------- | ---------------
+Tu Jan 19 | Introduction - Pen and Paper Tools |  |
+Th Jan 21 | Rmarkdown basics - writing tools |  |
+Tu Jan 26 | Rmarkdown basics - code chunks & scripts | Homework 1
+Th Jan 28 | R data structures | Literature, outline for project due
+Tu Feb 2 | R control structures |   Homework 2
+Th Feb 4 | R functions and pseudocode |  |
+Tu Feb 9 | EXAM I |  Homework 3
+Th Feb 11 | R graphics, plotting functions |  |
+Tu Feb 16 | Probability distributions |  Homework 3
+Th Feb 18 | Stochastic processes | Individual meeting on project, coding  |
+Tu Feb  23 | Exponential growth |  Homework 4
+Th Feb 25 | Modeling Density dependence |  |
+Tu Mar 1 | TOWN MEETING DAY RECESS |  Homework 5
+Th Mar 3 | EXAM II |  |
+Tu Mar 8 | SPRING BREAK |  |
+Th Mar 10 | SPRING BREAK |  |
+Tu Mar 15 | Two-species models |  Homework 6
+Th Mar 17 | guest lecture |  |
+Tu Mar 22 | Two-species models |  Homework 7
+Th Mar 24 | Statistics - contingency tables | Rough draft of project paper due
+Tu Mar 29 | Statistics - regression, anova |  Homework 8
+Th Mar 31 | Spatially Explicit Models |  |
+Tu Apr 5 | Individual-based Models |  Homework 9
+Th Apr 7 | Markov Models |  |
+Tu Apr 12 | EXAM III |  |
+Th Apr 14 | guest lecture |  |
+Tu Apr 19 | Research Presentations |  Homework 10
+Th Apr 21 | Research Presentations
+Tu Apr 26 | Research Presentations | Final project paper & slideshow due
+Th Apr 28 | Research Presentations |  |
+Tu May 3 | Research Presentations |  |
 
