@@ -20,3 +20,12 @@ Welcome to the homepage for Biology 264. Follow the links below each dated post 
 [CheatSheets And Resources For R Programming](Dec22/CheatSheets.html)
 
 ****
+
+#### 11 January 2016
+[Course Description](CourseMaterials/CourseDescription.pdf)
+
+[Lecture Schedule](CourseMaterials/LectureSchedule.pdf)
+
+[Personal Pledge](CourseMaterials/PersonalPledge.pdf)
+
+****
