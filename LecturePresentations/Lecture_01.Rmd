@@ -1,0 +1,103 @@
+---
+title: 'Lecture #1'
+author: "NJG"
+date: "January 19, 2016"
+output:
+  pdf_document:
+    highlight: tango
+  html_document: default
+fontsize: 12pt
+---
+
+# Materials For Course
+- Computer and vga cable
+- notebooks (moleskin and Leuchterm)
+- plain paper (for exercise)
+- grid graph paper
+- name tags
+- note cards
+- personal pledge
+- scientific papers
+
+# Introduction
+- myself
+- office hours (MWF 1:00 pm or by appointment)
+- (ngotelli@uvm.edu)
+- TA Devin Mueller (dlmuelle@uvm.edu) 
+- UVM undergraduate math major, art minor
+- office hours Tuesdays 10-12 in 209 MLS
+
+# History of the course
+- small class, lectures, readings
+- larger with random groups
+- getting students to participate
+
+# Why the need?
+- ecology as a quantitative science
+- programming most like solving real problems in science
+- environment for interactive learning and thinking on your feet
+- polish speaking and presentation skills
+
+# What the course will cover
+- open-source tools for science (word processing, graphics, computer modeling, slides)
+- basic to intermediate r programming (a crash course)
+- creating simple graphs for understanding mathematical equations
+- use of probability distributions (normal, uniform, Poisson, binomial, gamma, beta)
+- stochastic models of population growth and community change
+- statistical analysis with R (ANOVA, regression crash course)
+- advanced modeling topics (Markov models, spatially explicit models, individual-based models)
+- conference style presentation of original research project
+
+# Student participation & organization of schedule
+- random assignment to groups (do this now)
+- work on assignments and get help in your group!
+- random call of students to demonstrate their code and answers
+```{r eval=FALSE}
+TodaysGroups <- RandomGroups(z=classNames,groups=7)
+TodaysGroups
+TodaysGroups[1]
+TodaysGroups[2]
+TodaysGroups[3]
+
+sample(classNames,1)
+weights <- rep(40,3)
+weights <- c(rep(1,30),weights)
+sample(classNames,1,prob=weights)
+
+```
+
+# Assignments
+- daily classroom assignments
+- weekly homework assignments
+- in class exams ("open book")
+- final paper
+- final presentation
+
+
+# Course Materials
+- website location: (http://gotellilab.github.io/Bio264/) 
+- course description
+- lecture schedule
+- personal pledge
+
+# Introductions
+- notecards
+    - Name
+    - Major, year in school
+    - previous bio, stats courses
+    - "Fun Fact"
+- introduce yourself to everyone in your group
+- now a few introductions from randomly chosen students
+
+# Old school tools
+- hand-written notes
+- notebooks to use (bring in samples)
+- take notes on papers
+
+# Class exercise
+- read scientific paper
+- create a "cheat sheet" (~20 minutes)
+- pair up with someone in your group who did not read the same paper
+- random student presentations
+
+# Check on software installation!
