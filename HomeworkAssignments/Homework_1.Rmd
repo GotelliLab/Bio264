@@ -1,0 +1,42 @@
+---
+title: 'Bio 264 Homework #1'
+author: "Nicholas J. Gotelli"
+date: 'Due: 28 January 2016'
+output:
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+# Create A Markdown Document
+Using your new markdown skills, set up a new project and create a new markdown file called `<Your last name>_HW#1_28Jan2016`.
+
+Write a paragraph or two describing what you would like to do for your final project this semester (it is not too soon to start thinking about it and working on it!). If you are a graduate student or an undergraduate working in a research lab, you should already be able to give a fairly detailed description of what you are working on and how you will organize that into a term paper and presentation. 
+
+If you are undergraduate without a project, go out onto the web and see if you can find a paper from the primary scientific literature that has both some data and some modeling (or at least some theory that can be used to build a model). Search in recent issues of journals such as *Ecology*, *Ecology Letters*, *Oikos*, *Oecologia*, *The American Naturalist*, *Science*, *Nature*, or *Proceedings Of The National Academy Of Sciences*. Conservation journals and conservation-related topics may be OK, but many times they don't have enough data or theory behind them for our purposes.
+
+In your paragraph, include as many of the markdown formatting features as you can (even if they are a bit gratuitious).  To get the full list, use the pull down question mark icon and select `Markdown Quick Reference`. Be sure to include a link to something relevant on the web, and also include an image (which you will need to download from the web first).
+
+And, just for fun, typeset in your document these familiar equations from ecology and evolution:
+
+$$N_t = N_0e^{rt}$$
+
+$$\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right)$$
+
+For the second equation, you will have to search on the web to figure out how to give a LaTeX command that will generate the "large" parentheses.
+
+# Create A Slide Show
+
+Now create from the dropdown menu a new markdown file (Rmarkdown -> presentation). Start with `ioslides` or `slidy`. Call this file `<Your last name>_HW#1_SlideShow_28Jan2016`.
+
+Try to summarize your research paragraph in a few slides. Experiment with adding in a figure.
+
+Finally, render the slideshow as a beamer presentation (you will need LaTeX installed on your machine in order to do this). Be sure to explore the different layouts and fonts that are available from the pulldown options menu (click on the little gear). Most of the layouts look great, but a few are ugly.
+
+# Materials to turn in
+
+When you come to class, have your computer these files to copy onto a flash drive and transfer to Dr. Gotelli:
+
+1. `<Your last name>_HW#1_28Jan2016.Rmd`. 
+2. `<Your last name>_HW#1_SlideShow_28Jan2016.Rmd`. 
+3. `<Your last name>_HW#1_SlideShow_28Jan2016.pdf`.
