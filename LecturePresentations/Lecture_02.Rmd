@@ -1,0 +1,79 @@
+---
+title: 'Lecture #2'
+author: "NJG"
+date: "January 21, 2016"
+output:
+  html_document:
+    theme: readable
+  pdf_document: default
+fontsize: 12pt
+---
+
+# History of Word Processing
+- plain text editor (show it)
+    - fixed width font
+    - formatting indicated by simple characters `*italic*`
+- Knuth 1977 LaTeX
+- 1980s early word processing *mark-up* language
+- 1986 early Apple WYSIWYG
+- 1990s - present growth and domination of Microsoft and Word
+- problems: cumbersome, too many features, slow, proprietary
+
+# Demo of Products
+- BCOR lecture notes in html, and pdf
+- beamer slide show 
+
+# Demo of R
+- show from menu
+- show from command line
+
+# Demo of RStudio
+- open R studio
+    - adjustment of window sizes
+    - adjustment of window panes
+    - fonts and screen colors
+    - set up global options
+    
+# File and folder names
+- don't use blank spaces 
+- numbers OK but not at start
+- general format `<YourLastName>_HW#1_21Jan2016`
+- Rstudio will add file suffixes `.Rmd`
+
+# Create a new Project
+- open and set things up
+- create a lowly text file
+- exit
+- don't save Robject
+- reopen by clicking on project or opening RStudio & selecting project
+
+# Create a new project on your own
+- once inside open a lowly text file, save it, and exit
+
+# Creating a Markdown document
+  - file `.Rmd` is *rendered* to `.html` or `.pdf`
+  - explain spacing 
+  - show options with the `Markdown Quick Reference`
+  - shortcut `<CTR><Shift>K` to render
+  
+# Using LaTeX for equations
+- single versus double dollar signs for equations
+To put it in the line $a = b + c$ looks like this. To put it on its own $$a = b + c$$ look like this
+
+## Essential equation codes
+- fractions $\frac{a}{b + c}$
+- superscript $cA^z$
+- subscript $cA_z$
+- summation $\sum_{i=1}^{n}x^2$ is a little cramped in text
+- summation looks nicer on full line
+
+$$\sum_{i=1}^{n}x^2$$
+
+# Class Exercise
+- create Markdown document `<YourName>_InClass_21Jan2016`
+- transcribe from papers
+- add a link
+- add a figure
+- figure out how to format this:
+
+$$\frac{\alpha}{\beta + \sigma^2}$$
