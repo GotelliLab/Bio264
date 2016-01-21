@@ -29,3 +29,8 @@ Welcome to the homepage for Biology 264. Follow the links below each dated post 
 [Personal Pledge](CourseMaterials/PersonalPledge.pdf)
 
 ****
+
+#### 21 January 2016
+[Homework #1: due 28 Jan 2016](HomeworkAssignments/Homework_1.html)
+
+****
