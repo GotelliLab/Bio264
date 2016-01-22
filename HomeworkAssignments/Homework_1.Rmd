@@ -17,13 +17,20 @@ If you are undergraduate without a project, go out onto the web and see if you c
 
 In your paragraph, include as many of the markdown formatting features as you can (even if they are a bit gratuitious).  To get the full list, use the pull down question mark icon and select `Markdown Quick Reference`. Be sure to include a link to something relevant on the web, and also include an image (which you will need to download from the web first).
 
-And, just for fun, typeset in your document these familiar equations from ecology and evolution:
+And, just for fun, typeset in your document these equations:
 
 $$N_t = N_0e^{rt}$$
 
+$$\sigma^2 = \frac{\alpha}{\beta + \gamma}$$
+
 $$\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right)$$
 
-For the second equation, you will have to search on the web to figure out how to give a LaTeX command that will generate the "large" parentheses.
+For the second equation, you will have to figure out how to display Greek symbols, and for the third equation, you will have to figure out how to give a LaTeX command that will generate the "large" parentheses.
+
+Search on the web (try "Greek symbols in LaTeX") to find the commands that you need. Some of the answers will be too technical, but you will eventually find a wiki, cheatsheet, tutorial, or some other piece of information that will give you the answer. This is how you get most of your questions answered about R and its numerous functions.
+
+Happy hunting!
+
 
 # Create A Slide Show
 
@@ -35,8 +42,12 @@ Finally, render the slideshow as a beamer presentation (you will need LaTeX inst
 
 # Materials to turn in
 
-When you come to class, have your computer these files to copy onto a flash drive and transfer to Dr. Gotelli:
+When you come to class, have your computer these files to copy onto a flash drive and transfer to me:
 
-1. `<Your last name>_HW#1_28Jan2016.Rmd`. 
-2. `<Your last name>_HW#1_SlideShow_28Jan2016.Rmd`. 
+1. `<Your last name>_HW#1_28Jan2016.html`. 
+2. `<Your last name>_HW#1_SlideShow_28Jan2016.html`. 
 3. `<Your last name>_HW#1_SlideShow_28Jan2016.pdf`.
+
+If you have had problems with LaTeX on your machine, then don't worry about generating the third file. However, you should try and see me in office hours or contact Devin (dlmuelle@uvm.edu) to see if we can get that fixed.
+
+Normally, I will have you turn in `.Rmd` files for homework. But with the associated images in this assignment, your `.Rmd` files will not "knit" successfully on my machine, so let's go with the `.html` files this week.
