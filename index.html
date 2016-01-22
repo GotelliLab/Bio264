@@ -69,7 +69,20 @@ img {
 <hr />
 </div>
 <div id="january-2016-1" class="section level4">
-<h4>21 January 2016</h4>
+<h4>22 January 2016</h4>
+<p>You all did a good job on your first day working with RStudio and Markdown. If you ar still having trouble with LaTeX, make sure you have the latest versions of RStudio and R installed. If that doesn’t work, try uninstalling everything and reinstalling fresh (time-consuming, but you can’t hurt anything). Please see me or contact Devin (<a href="mailto:dlmuelle@uvm.edu">dlmuelle@uvm.edu</a>) for additional help. Don’t sweat it if you simply cannot get LaTeX installed and working. The only thing you really need it for is your final presentation, and we can knit your file separately on a different machine to set that up.</p>
+<p>I modified the homework assignment this week so that you will just turn in your <code>.html</code> files, which should have your imbedded images. For more typical assignments, I will collect your <code>.Rmd</code> or <code>.R</code> files and run them myself.</p>
+<p>For turning in homeworks, I think the simplest solution is for you to get your own flash drive (they are available in the bookstore), copy your homework onto it, and then I will copy it onto my machine (we can certainly do some of that before class starts on Thursday). Although this is a little more time consuming for each of you, it means I can leave class with all of your homework in a single folder on my desktop, which is a huge time savings for me. <em>Thank you!</em></p>
+<p>Last time, Justin Sell asked me whether we could use the line equation in Markdown to create a centered html headline like this:</p>
+<pre><code>$$Hacking A Centered Headline$$</code></pre>
+<p>But if you try that in your Markdown file, you will get this:</p>
+<p><span class="math">\[Hacking A Centered Headline\]</span></p>
+<p>The problem is that LaTex thinks you are writing out math variables which should be displayed as if they are being multiplied together, with the spaces stripped out. Try this instead:</p>
+<pre><code>$$\text{Hacking A Centered Headline}$$</code></pre>
+<p>now you will see:</p>
+<p><span class="math">\[\text{Hacking A Centered Headline}\]</span></p>
+<p>To find this solution, I searched on the web for “plain text in LaTeX equations” and ended up at the LaTeX wiki, which had the solution.</p>
+<p>This is exactly how you will answer your own questions about R and LaTeX when you are trying to do new things.</p>
 <p><a href="HomeworkAssignments/Homework_1.html">Homework #1: due 28 Jan 2016</a></p>
 <hr />
 </div>
