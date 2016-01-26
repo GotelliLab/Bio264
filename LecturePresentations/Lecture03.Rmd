@@ -1,0 +1,94 @@
+---
+title: "Lecture #3"
+author: "Nicholas J. Gotelli"
+date: "January 26, 2016"
+output: 
+  html_document: 
+    highlight: tango
+    theme: cosmo
+---
+
+# Fencing in a Rmarkdown document
+
+```
+.```
+unformatted text goes here.
+
+All spacing and plain text characters are preserved.
+.```
+
+```
+# Inserting R chunks
+
+```
+.```{r}
+
+.```
+```
+# Adding some R code inside a chunk
+
+```{r}
+# creating a little chunk of R code
+# 26 January 2016
+# NJG
+
+# create and print time and mortality data series
+time <- 1:50
+print(time)
+
+mortality <- runif(50)
+print(mortality)
+
+# plot data with lines and points
+plot(x=time, y=mortality,type="b")
+```
+
+# Variations
+- `Ctrl Shift C` to code and uncode statement lines
+- eval= TRUE/FALSE
+- echo= TRUE/FALSE
+
+# Build your own Help system
+- show example of R vignettes
+
+# Code for chunks
+- `Ctrl Alt I` to insert a new chunk
+- `Ctrl Alt C` to run current chunk
+- `Ctrol Alt R` to run all chunks
+
+
+# R scripts
+- standard work flow
+- `Ctrl Shift S` to source file
+- `Ctrl Shift Enter` to source with echo
+
+# Show the workflow
+- switch here to generating the r script
+
+# Class assignment to investigate functions
+Function | Group
+--------|----------
+runif() | 1
+rnorm() | 2
+rep() | 3
+seq() | 4
+sort() | 5
+order() | 6
+which() | 1
+sample() | 2
+ceiling() | 3
+floor() | 4
+round() | 5
+trunc() | 6
+signif() | 1
+sort() | 2
+table() | 3
+unique() | 4
+any() | 5
+cat() | 6
+range() | 1
+diff() | 2
+cumsum() | 3
+cumprod() | 4
+cummax() | 5
+cummin() | 6
