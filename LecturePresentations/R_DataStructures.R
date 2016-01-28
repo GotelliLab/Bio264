@@ -123,3 +123,79 @@ x <- c(2,2,4,3,6)
 x[x==3]
 x[x!=3]
 x[x!=5]
+#-----------------------------------
+# naming vector elements
+
+x <- c(10,12,2.2)
+x[2]
+names(x) <- c("snake","bird","fireAnt") # names function to add names
+x["fireAnt"]
+x[x != "fireAnt"]  # not what we want!
+x[names(x)!="fireAnt"] # subscript the name, not the element
+
+x <- NULL # strip out existing names
+x
+x <- c("snake"=10, "bird"=12,"fireAnt"=2.2) # add names at vector creation
+x
+names(x)[3] <- "harvesterAnt"
+x
+#-----------------------------------
+# lists
+
+x <- list(runif(3),"badger",c(TRUE,FALSE),seq(11,14))
+x
+# single parens to get list component (the "boxcar" in the train)
+# double parens to get the contents of the component (what's in the boxcar)
+x[1]
+x[[1]]
+x[[1]][2]
+x[[2]]
+
+# adding names to lists
+
+names(x) <- c("ranNums","animal","decisions","intSeq")
+x
+# dollar sign + name can be used to get list items as vectors
+x$decisions
+x$intSeq[2]
+
+z <- unlist(x) #coerces back to atomic vector, but retains names
+z
+str(z)
+z["ranNums2"]
+
+#-----------------------------------
+# matrix - an atomic vector with two dimensions
+
+m <- matrix(seq(1,6),nrow=3)
+m
+m <- matrix(seq(1,6),nrow=2)
+m
+m <- matrix(seq(1,6),nrow=4)
+m
+m <- matrix(seq(1,6),nrow=7)
+m <- matrix(seq(1,6),nrow=3,byrow=TRUE)
+m
+# give names through dimnames
+dimnames(m) <- list(c("pitcherPlant","peatMoss","blueberry"),c("bog","fen"))
+m
+
+# use rownames and colnames
+rownames(m) <- NULL
+colnames(m) <- c("field","stream")
+m
+
+
+# use empty placeholder to subset whole rows or columns
+
+bigz <- matrix(sort(runif(25)),nrow=5,byrow=TRUE)
+bigz
+bigz[5,5]
+bigz[1,5]
+bigz[c(1,2),c(1,2)]
+bigz[1,]
+bigz[,1]
+str(bigz[,1])
+bigz[,]
+max(bigz)
+which(bigz==max(bigz)) # still thinks of bigz as a vector for subscripting

@@ -1,0 +1,50 @@
+---
+title: 'Lecture #4'
+author: "Nicholas J. Gotelli"
+date: "January 28, 2016"
+output:
+  pdf_document: default
+  html_document:
+    highlight: tango
+    theme: cosmo
+---
+# Preliminaries
+- rename `LastNameR_DataStructures_28Jan2016`
+- turn in `LastName_Homework01_28Jan2016`
+- turn in `LastNameR_DataStructures_28Jan2016`
+
+# Vector Names
+
+# Lists
+
+#  Matrices
+# Class assignment to investigate functions
+
+- create a new Rmarkdown file: `MyName_FunctionHelp_28Jan2016`
+
+Function | Group
+--------|----------
+runif() | 1
+rnorm() | 2
+rep() | 3
+seq() | 4
+sort() | 5
+order() | 6
+which() | 1
+sample() | 2
+ceiling() | 3
+floor() | 4
+round() | 5
+trunc() | 6
+signif() | 1
+sort() | 2
+table() | 3
+unique() | 4
+any() | 5
+cat() | 6
+range() | 1
+diff() | 2
+cumsum() | 3
+cumprod() | 4
+cummax() | 5
+cummin() | 6
