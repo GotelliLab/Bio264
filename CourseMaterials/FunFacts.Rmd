@@ -1,0 +1,39 @@
+---
+title: ""
+author: ""
+date: ""
+output: html_document
+---
+
+## Fun Facts about Biology 264 students
+
+### Spring 2016
+
+Student | Fun Fact
+--- | ---
+Lauren Ash | Studied in Africa.
+Britta Bergren | I live in Pittsburgh.
+Sam Brown | I'm British.
+Alex Burnham | I've been playing guitar since I was 9.
+Tucker Andrews | Bald since 18!
+Colby Cayton | I am a ballet dancer and started a ballet company at UVM.
+Chris Damon | I play a lot of foosball.
+Rebecca D'Agostino | I play on-line competitive video games with Eastern Europeans, and I know some Slovak and Russian curses.
+Corey Evans | Scored on Tim Thomas during hockey camp.
+Margot Gagnon | I make custom Pokeman animal pajamas on Etsy and sell them as a hobby & for money.
+Alex Gambero | I have held a one-point record for one of the fastest times in competition on the playstation game "Spyro".
+Nick Gotelli | I play guitar in airport terminals around the world.
+Hunter Grosvenor | Coach of an adaptive sled hockey.
+Allison Hrycik | I met a professional bigfoot hunter while hitch-hiking.
+Mallory Ketcham | I work for the Vermont State Parks.
+Meghan Lee | I have two budgerigars at home.
+Vanessa Lyle | I'm a huge runner.
+Kyle Motley | Worked as a brewer on a tropical island before coming to grad school.
+Adam Noel | I've saved my friend's life.
+Brian O'Malley | Syracuse basketball fanatic.
+Curtis Provencher | Can do a backflip on command.
+Nicole Rogers | I have an identical twin.
+Justin Sell | Work in IT.
+Anya Tyson | I play accordion and sometimes star in a one-woman band.
+Andrew Waterhouse | I have a song called Guacamole
+Kathryn Wrigley | Thru-hiked the Long Trail this summer.
