@@ -15,7 +15,7 @@ RandomGroups <- function(z=classNames,groups=7){
   GroupAssigns <- gl(n=groups,k=length(z)%/%groups)
   
   # use modulo function to divide remaining individuals evenly among groups
-  GroupAssigns <-c(GroupAssigns,(1:(length(z)%%groups)))
+  if (length(z)%%groups!=0) GroupAssigns <-c(GroupAssigns,(1:(length(z)%%groups)))
   
   # create data frame and shuffle group labels
   GroupDataFrame <- cbind(classNames,group=sample(GroupAssigns))
