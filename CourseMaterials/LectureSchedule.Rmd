@@ -2,8 +2,9 @@
 title: "Bio 264 Lecture Schedule"
 author: "Nicholas J. Gotelli"
 date: "January 7, 2016"
-output: 
-  pdf_document: 
+output:
+  html_document: default
+  pdf_document:
     highlight: tango
 fontsize: 10pt
 ---
@@ -16,7 +17,7 @@ Tu Jan 26 | Rmarkdown basics - code chunks & scripts | Homework 1
 Th Jan 28 | R data structures | Literature, outline for project due
 Tu Feb 2 | R control structures |   Homework 2
 Th Feb 4 | R functions and pseudocode |  |
-Tu Feb 9 | EXAM I |  Homework 3
+Tu Feb 9 | EXAM I |  |
 Th Feb 11 | R graphics, plotting functions |  |
 Tu Feb 16 | Probability distributions |  Homework 3
 Th Feb 18 | Stochastic processes | Individual meeting on project, coding  |

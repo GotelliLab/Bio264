@@ -1,0 +1,110 @@
+---
+title: 'Lecture #4'
+author: "Nicholas J. Gotelli"
+date: "February 02, 2016"
+output:
+  pdf_document: default
+  html_document:
+    highlight: tango
+    theme: cosmo
+---
+
+## Trickiness in R markdown files
+
+- you are using 3 languages
+
+```
+x^(2*a)  # exponentiates variable x - R code
+x^2a^ # renders formula  in a line of text - Rmarkdown code
+x^{2a} # renders code inside of equation markers $$ - LaTeX code
+```
+
+## LateX code in your R document
+
+- can be used anywhere in the R markdown text (but not in R chunks)
+
+- rendering to pdf: LateX instructions followed
+- rendering to html: LaTeX instructions ignored!
+
+- most common LaTeX command `\newpage`
+
+- LaTeX really only needed for documents that have to be printed
+
+## Functions
+
+### Reasons to Use Functions
+
+- structured programming
+
+- recycling of variable names
+
+- independent testing of functions
+
+- reuses code in different places in program and in different programs
+
+- cut and paste to use the code of others in your own program(!)
+
+```
+MyfunctionName <- function(Arg1,Arg2,...) {
+
+add all R code between brackets
+
+return(VariableName)
+
+}
+```
+
+### Using the function
+
+- Source function with `source(MyfunctionName)`
+
+- Run function with `MyfunctionName(val1,val2)`
+
+- Run function with default values `MyfunctionName()`
+
+- Print the function code to the console `MyfunctionName`
+
+### All R codes are functions
+
+### Rules for scope
+
+- all arguments and function variables are local (hierarchical)
+
+- names do not replace same names of global variables
+
+- functions can call other functions
+
+- functions can use global variables (not recommended)
+
+
+
+
+
+\newpage
+
+Function | Group
+--------|----------
+runif() | 1
+rnorm() | 2
+rep() | 3
+seq() | 4
+sort() | 5
+order() | 6
+which() | 1
+sample() | 2
+ceiling() | 3
+floor() | 4
+round() | 5
+trunc() | 6
+signif() | 1
+sort() | 2
+table() | 3
+unique() | 4
+any() | 5
+cat() | 6
+range() | 1
+diff() | 2
+cumsum() | 3
+cumprod() | 4
+cummax() | 5
+cummin() | 6
