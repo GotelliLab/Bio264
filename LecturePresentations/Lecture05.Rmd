@@ -1,5 +1,5 @@
 ---
-title: 'Lecture #4'
+title: 'Lecture #5'
 author: "Nicholas J. Gotelli"
 date: "February 02, 2016"
 output:
