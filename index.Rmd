@@ -14,7 +14,12 @@ output:
 Welcome to the homepage for Biology 264. Follow the links below each dated post to pages for course material. The most recent postings are always at the top.
 
 ****
+#### 07 February 2016
+[Solutions to Homework#2 (html)](HomeworkAssignments/Homework_2_Solutions.html)
 
+[Solutions to Homework#2 (pdf)](HomeworkAssignments/Homework_2_Solutions.pdf)
+
+****
 #### 28 January 2016
 ["Fun Facts" about the students in Bio 264](CourseMaterials/FunFacts.html)
 
