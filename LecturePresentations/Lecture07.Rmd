@@ -1,0 +1,32 @@
+---
+title: 'Lecture #7'
+author: "Nicholas J. Gotelli"
+date: "February 11, 2016"
+output: pdf_document
+---
+
+# For Loops
+
+- var changes in loop
+- set an explicit endpoint
+- caution on sequence endpoints
+- caution about initialization and variables outside loops
+- always make the loop variable an integer
+- still easy to operate on character strings
+
+# Building a Random Walk Model Of Population Growth
+- defining a few global variables
+- bundling things into a function
+- use the break function to get stop a loop prematurely 
+
+# Double For Loops
+- traverse a matrix and operate on each element
+- traverse a matrix with a constant operation
+- constants for the rows
+- constants for the columns
+
+# Doing same things without loops
+- vectorized call for operation on each element
+- vectorized call for operation wtih constant
+- loop through the rows
+- loop through the columns
