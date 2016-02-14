@@ -1,0 +1,106 @@
+---
+title: "Exam 1"
+output:
+  pdf_document:
+    highlight: tango
+  html_document: default
+date: "February 9, 2016"
+---
+
+Create a markdown file in RStudio, and call it `YourLastName_Exam1`. Answer all of the exam questions in this file, with your r code for each problem inserted in a separate chunk. When you are finished, copy your file to a flash drive and bring it to the front to turn it in. Be sure it compiles properly before you turn it in, and remember to turn it in before you leave.
+
+1. Write a short chunk of r code that clears all variables from memory and sets the random number seed to a value of 1000. **(4 points)**
+
+```{r}
+rm(list=ls())
+set.seed(1000)
+```
+
+2. In population genetics, the Hardy Weinberg equation gives the expected genotype frequencies in a randomly mating population, given an initial frequency *p* for an allele *A*, and frequency *q* for the alternate allele *B*. The essential equations are:
+
+$$ p + q = 1 $$
+
+$$ f(AA) = p^2 $$
+
+$$ f(AB) = 2pq $$
+
+$$ f(BB) = q^2 $$
+
+   a) Typeset these equations in your markdown file so they look the same as they do here. **(4 points)**
+   
+```   
+$$ p + q = 1 $$
+
+$$ f(AA) = p^2 $$
+
+$$ f(AB) = 2pq $$
+
+$$ f(BB) = q^2 $$
+```
+
+   b) Write a function  `HardyWeinberg` that takes as input the value of *p*, and returns a vector containing (*f(AA)*, *f(AB)*, *f(BB)*). In your function, use a random uniform number to set an inital value for *p*. **(8 points)**
+   
+```{r}
+HardyWeinberg <- function(p=runif(1)){
+  q <- 1 - p
+  v <-vector(mode="numeric",3)
+  names(v) <- c("f(AA)","f(AB)","f(BB)")
+  v[1] <- p^2
+  v[2] <- 2*p*q
+  v[3] <- q^2
+  return(v)
+}
+```
+
+   
+   
+   c) Call your function twice, once using the default values, and once using *p* = 0.1. **(6 points)**
+   
+```{r}
+HardyWeinberg()
+HardyWeinberg(p=0.1)  
+```
+
+   d) Call your function with *p* = 0.5, and save your results to a variable *z*. Print the answer to the screen, so that it says *"The allele frequencies are: `<result of your function>`"* and then prints a carriage return. **(4 points)**
+
+```{r}
+z <- HardyWeinberg(p=0.5)
+cat("The allele frequencies are: ", z, "\n")
+```
+
+\newpage
+
+3. a) Using `runif`, create an initial vector of 1000 random uniform values that range from -2 to +2 (use R's help system if you need help doing this). **(4 points)**
+
+```{r}
+z <- runif(1000, min=-2,max=2)
+```
+
+   b) Create a second vector (using the `vector` function) to hold 1000 character strings. Using a `for` loop, fill this vector with character strings. Whenever the value in your initial vector is < 0, assign to the second vector the character string "negative". Whenever the value in your initial vector is > 0, assign to the second vector the character string "positive". **(4 points)**
+    
+```{r}
+z2 <- vector(mode="character",1000)
+for (i in 1:1000) {
+  if(z[i] >0) z2[i] <- "positive" else z2[i] <- "negative"
+}
+```
+
+   c) print out the last six elements of your two vectors. **(4 points)**
+    
+```{r}
+  print(z[994:1000])
+  print(z2[994:1000])
+
+```
+
+    d) Recreate the string vector, this time using a single call to the function `ifelse`. **(4 points)**
+
+```{r}
+z3 <- ifelse(z>0, "positive", "negative")
+  print(z[994:1000])
+  print(z3[994:1000])
+```
+
+4. a) Pick any R function that you have not used in any of the previous problems. Write a user-friendly paragraph explaining how the function is used, and illustrate it with some code. Be sure to illustrate all of the options that are available for this function. If you have already written something for your own "help system", you can cut and paste that and indicate it is your own writing. **(6 points)**
+
+b) Go out onto the internet and find a blog or internet entry that uses or illustrates your function. Cut and paste the example into an R chunk. In your Rmarkdown, provide a link to the website where you took this information from. **(6 points)**
