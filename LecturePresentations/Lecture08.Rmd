@@ -1,0 +1,22 @@
+---
+title: 'Lecture #8'
+author: "Nicholas J. Gotelli"
+date: "February 16, 2016"
+output: pdf_document
+---
+
+# Double For Loops
+- traverse a matrix and operate on each element
+- traverse a matrix with a constant operation
+- constants for the rows
+- constants for the columns
+
+# Doing same things without loops
+- vectorized call for operation on each element
+- vectorized call for operation wtih constant
+- loop through the rows
+- loop through the columns
+
+# Understanding mathematical equations
+- variables (independent and dependent)
+- constants (= parameters)
