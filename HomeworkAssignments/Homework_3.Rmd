@@ -1,0 +1,28 @@
+---
+title: 'Bio 264 Homework #3'
+author: "Nicholas J. Gotelli"
+date: 'Due: 22 February 2016'
+output:
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+Create a new markdown file called `<Your last name>_HW#3_22Feb2016`. Cut and paste the problems below into Markdown, then add chunks of R code to provide your answers. You will turn in both the `.Rmd` and the `.html` file for this homework assignment.
+
+1. Create a function that takes as input an integer value *n*. Inside your function, create a square *n* x *n* matrix and fill it with zeroes. Now replace the diagonal elements with 1s. The function should print the matrix. If you have done this correctly, the 1s should form a visual pattern of an "x" that extends to the 4 corners of the square matrix.
+
+- Try to do this exercise using a `for` loop.
+
+- Hunt around on line or in the help system and seem if you can use some of R's matrix functions to achieve the same thing.
+
+2. The most basic equation of all is a straight line:
+
+$$Y = a + bX$$
+
+where *Y* is the "dependent variable", *X* is the "independent variable", and *a* and *b* are the constants. 
+
+- Using the methods we have developed in class, create a graphic function for examining this linear relationship and illustrate it with different settings for the two parameters. What is the interpretation of the parameters *a* and *b*
+
+- Use this as an opportunity to explore the many options that are available in `par`, and `plot` (or `matplot`). Spiff up your margins, labels, and graphs so they look sharp!
+

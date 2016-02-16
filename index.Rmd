@@ -14,6 +14,10 @@ output:
 Welcome to the homepage for Biology 264. Follow the links below each dated post to pages for course material. The most recent postings are always at the top.
 
 ****
+#### 16 February 2016
+[Homework #3: due 23 Feb 2016](HomeworkAssignments/Homework_3.html)
+
+****
 #### 14 February 2016
 [Key to Exam#1 (html)](HomeworkAssignments/Exam1_Solutions.html)
 
