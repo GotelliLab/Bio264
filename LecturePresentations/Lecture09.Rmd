@@ -1,0 +1,37 @@
+---
+title: 'Lecture #9'
+author: "Nicholas J. Gotelli"
+date: "February 18, 2016"
+output: pdf_document
+---
+
+# Class Assignment
+- find information on the function
+- identify x variable (units, appropriate range)
+- identify y variable (units, appropriate range)
+- identify model parameters (interpretations?)
+- create functions and plots showing how parameters affect the relationship between x and y
+
+\newpage
+
+# Group Assignments
+
+1. Exponential Growth
+2. Logistic Growth
+3. Ricker Equation
+4. Type II Functional Response (Michaelis-Menten)
+5. von Bertalanffy Growth Curve
+
+\newpage
+
+# Summary of Equations
+
+Name | Equation | X Variable | Y Variable | Parameters
+---| ---| ---| ---|----
+Exponential Growth | $N_t=N_0e^{rt}$ | $t$ | $N$ | $N_0,r$
+Logistic Growth | $N_t = rN_{t-1}(1- \frac{N_{t-1}}{K})$ | $t$ | $N$ | $N_0,r,K$
+Ricker Equation | $N_t = N_{t-1}e^{r(1-\frac{N_{t-1}}{K})}$ | $t$ | $N$ | $N_0,r,K$ 
+Holling Type II | $F = \frac{aV}{1+ahV}$ | $V$ | $F$ | $a,h$
+von Bertalanffy Growth | $M_t = M_\infty - (M_\infty - M_t)e^{-kt}$ | $t$ | $M$ | $M_\infty,k$
+
+
