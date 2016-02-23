@@ -1,0 +1,68 @@
+---
+title: 'Lecture #10'
+author: "Nicholas J. Gotelli"
+date: "February 23, 2016"
+output: pdf_document
+---
+
+# Modeling differential equations
+
+$$\frac{dN}{dt} = rN$$
+$$N_t = N_0e^{rt}$$
+
+$$n_t = n_0e^{rt}\stackrel{\mbox{differentiate}}{\longrightarrow}\frac{dn}{dt} = rN$$
+
+$$n_t = n_0e^{rt}\stackrel{\mbox{integrate}}{\longleftarrow}\frac{dn}{dt} = rN$$
+
+# General form for coding of differential equations
+
+$$\frac{dN}{dt} = \mbox{"change"}$$
+
+# Definition of derivative and graph of it
+- change in N measured over a small time interval t
+- in a graph of N vs t, $dN/dt$ is the slope of the function at t.
+
+# Coding a derivative in R
+
+```
+N[t] <- N[t - 1] + "change"
+```
+\newpage
+
+# Other details and model complexity
+- $dN/dt$ will often be a function of N at time t
+- $dN/dt$ may also be a function of the environment, or of the population sizes of other species also measured at time t
+- if there is a time lag, then growth of N at time t will often depend on growth of N at a time further in the past
+- model parameters can be constants or they can be random variables
+
+```
+# two species (N and P) with two parameters (r and a)
+N[t] <- N[t - 1] + r*N[t-1] - a*P[t-1]*N[t-1]
+
+# one species with multiple time lags and 
+# associated parameters (r1,r2,r3)
+N[t} <- N[t -1] + r1*N[t-1] + r2*N[t-2] + r3*N[t-3]
+
+# one species stochastic exponential model with normal distribution 
+# instead of a constant parameter r
+
+N[t] <- N[t-1] + rnorm(n=1,mean=r,sd=1)*N[t-1]
+
+```
+
+# Matrix columns for standard plots
+
+```
+N         # population size or response variable
+t         # time (usually an integer value 1..Tmax)
+dN/dt     # growth rate (N[t] - N[t-1])
+(1/N)dNdt # per capita growth rate
+```
+
+# Create plots
+
+- N versus t
+- $dN/dt$ versus N
+- $(1/N)dN/dt$ versus N
+- possibly show N as a function of parameters or other variables
+
