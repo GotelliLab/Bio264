@@ -3,3 +3,4 @@
 .RData
 *.Rproj
 roster.csv
+.DS_Store
