@@ -1,0 +1,30 @@
+---
+title: "Exam 2"
+output:
+  pdf_document:
+    highlight: tango
+  html_document: default
+date: "March 3, 2016"
+---
+
+Create a markdown file in RStudio, and call it `YourLastName_Exam2`. Answer all of the exam questions in this file, with your r code for each problem inserted in a separate chunk. When you are finished, knit your file to `YourLastName_Exam2.html`. Make sure your markdown file compiles properly, copy both files to a flash drive, and bring them to the front to turn them in before you leave. Also turn in the hard copy of the exam with your name written at the top.
+
+Metapopulations are local populations that are connected through immigration and emmigration. The variable *f* is used to indicate the proportion of patches in a landscape that are occupied by local populations. The classic island-mainland model for metapopulations is:
+
+$$\frac{df}{dt} = i(1 - f) - ef$$
+
+where *i* and *e* are parameters that represent the probability of local colonization and local extinction.
+
+1. Write a function `Model1` that takes as input the following parameters:
+- `Time` = the number of time steps (set to a default value of 20)
+- `f_0` = the initial vaue for *f* (set to a default value of 0.1)
+- `i` = the immigration parameter (set to a defaut value of 0.6)
+- `e` = the extinction parameter (set to a default value of 0.2)
+
+Your function should return a vector of length `Time` that contains the values of *f* at each time step (Be careful! If you are using *i* as the name of one of your parameters, you cannot also use *i* as a counter variable in a `for` loop!). It should also generate a simple plot of *f* versus *t*. In the plot, set the y-limits to be 0 and 1 (because f is a proportion, it will always be between these boundaries). Run the function with its default values.  **(15 points)**
+
+
+2. Using `Model1`, illustrate different input values for *f_0*,  *i* and *e* (remember, *i* and *e* are probabilities, and *f_0* is a proportion, so all three must be real numbers between 0.0 and 1.0). Based on these values, describe in your markdown file how the variable *f* changes through time and how it is affected by *f_0*, *i* and *e*.  **(15 points)**
+
+3. Create `Model2` from a copy of `Model1`. Keep all of the inputs the same. But instead of assigning a constant for the parameters *i* and *e*, allow these parameters to take on a different random value (use `runif`, which will keep the values between 0 and 1) at each time step. As part of the output of `Model2`, generate a simple plot of *f* versus *t*. How does the output from the deterministic `Model1` differ from the stochastic `Model2`? **(20 points)**
+
