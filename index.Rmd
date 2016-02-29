@@ -14,6 +14,23 @@ output:
 Welcome to the homepage for Biology 264. Follow the links below each dated post to pages for course material. The most recent postings are always at the top.
 
 ****
+#### 29 February 2016
+Ecology equations from class
+
+Title | Equation | X variable | Y Variable | Parameters
+--|--|--|--|--
+Species Area Power Function | $S=cA^z$ | $A$ | $S$ | $c,z$
+Exponential Growth | $\frac{dN}{dt}=rN$ | $t$ | $N$ | $N_0,r$
+Logistic Growth | $\frac{dN}{dt}=rN\left(1-\frac{N}{K}\right)$ | $t$ | $N$ | $N_0,r,K$
+Ricker Growth | $N_{t+1}=N_te^\left(1-\frac{N_t}{K}\right)$ | $t$ | $N$ | $N_0,r,K$
+von Bertalanffy Growth | $L_{t+1}=r(L_{max}-L_t)$ | $t$ | $L$ | $r,L_{max}$
+Michaelis-Menten (Holling Type II) | $F=\frac{aV}{1+ahV}$ | $V$ | $F$ | $a,h$
+
+
+[Solutions to Homework #3 (html)](HomeworkAssignments/Homework_3_Solutions.html)
+
+[Solutions to Homework #3 (pdf)](HomeworkAssignments/Homework_3_Solutions.pdf)
+
 #### 23 February 2016
 Here are the R script files I have generated for lecture presentations this semester:
 
