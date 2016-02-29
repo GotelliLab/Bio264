@@ -1,0 +1,113 @@
+---
+title: 'Bio 264 Homework #3'
+author: "Nicholas J. Gotelli"
+date: 'Due: 22 February 2016'
+output:
+  pdf_document: default
+  html_document:
+    theme: cerulean
+---
+
+Create a new markdown file called `<Your last name>_HW#3_22Feb2016`. Cut and paste the problems below into Markdown, then add chunks of R code to provide your answers. You will turn in both the `.Rmd` and the `.html` file for this homework assignment.
+
+1. Create a function that takes as input an integer value *n*. Inside your function, create a square *n* x *n* matrix and fill it with zeroes. Now replace the diagonal elements with 1s. The function should print the matrix. If you have done this correctly, the 1s should form a visual pattern of an "x" that extends to the 4 corners of the square matrix.
+
+- Try to do this exercise using a `for` loop.
+
+*The key to this problem is to notice that, for any square n x n matrix with row i and column j, we can create an "x" pattern by 1) first filling all of the cases in which i==j and 2) adding a 1 whenever the sum of the row and column coefficients equals the number of rows + 1. We want both conditions, so we need to setup an if statement with the OR operator | to catch both in 1 statement*
+
+```
+if (i + j== n + 1 | i==j) m[i,j] <- 1
+```
+*Now we just insert this into our double `for` loop. To me, this seems much more elegant than the solution below, which requires several steps.*
+
+```{r}
+MyDiag1 <- function(n=5){
+  m <- matrix(rep(0,n^2),nrow=n)
+  for (i in 1:n){
+    for (j in 1:n){
+      if(i + j == n + 1 | i==j) m[i,j] <- 1
+    }
+  }
+  return(m)
+}
+MyDiag1()
+MyDiag1(8)
+```
+
+- Hunt around on line or in the help system and seem if you can use some of R's matrix functions to achieve the same thing.
+
+*Here is one way to do this. We first use the `diagonal` function to fill in all the diagonal elements with 1s. Next, we create a matrix z that has the row and column subscripts for the elements with a 1. Next we adjust  the z matrix to get the "mirror" column on the other side of the diagonal. Finally, we change those elements in the z matrix from 0 to 1. I have added intermediate print statements so you can see the output at each step, but you would normally strip those out once the code was debugged. This solution works, but I find it a bit cumbersome.*
+
+```{r}
+MyDiag <- function(n=5){
+  m <- matrix(rep(0,n^2),nrow=n) # create a square matrix of zeroes
+  print(m)                       # print matrix
+  diag(m) <- 1                   # fill diagonal elements with 1s
+  print(m)                       # print matrix
+  z <- which(m==1,arr.ind=TRUE)  # get coefficients for the 1s
+  print(z)                       # print coefficient list
+  z[,2] <- n + 1 - z[,2]         # set "mirror" element for the columns
+  print(z)                       # print modified coefficient list
+  m[z] <- 1                      # change the z elements
+  return(m)
+}
+
+MyDiag()
+```
+
+
+2. The most basic equation of all is a straight line:
+
+$$Y = a + bX$$
+
+where *Y* is the "dependent variable", *X* is the "independent variable", and *a* and *b* are the constants. 
+
+- Using the methods we have developed in class, create a graphic function for examining this linear relationship and illustrate it with different settings for the two parameters. What is the interpretation of the parameters *a* and *b*
+
+- Use this as an opportunity to explore the many options that are available in `par`, and `plot` (or `matplot`). Spiff up your margins, labels, and graphs so they look sharp!
+
+*Here is a simple function for varying the slope, with a few of the many possible parameters illustrated for `mplot`. I then use it to create a 3 panel graph in which I vary the intercept:*
+
+```{r}
+MyLine <- function(a=5,b=seq(0,1,length=6),x=0:100,ylim=c(0,100)){
+  m <-matrix(nrow=length(x),ncol=length(b))
+ for (i in 1:length(b)){
+ y <- a + b[i]*x
+ m[,i] <- y
+ }
+ 
+ 
+ 
+ 
+ matplot(x=x,y=m,
+      lty=1:length(b),    # uses different line types
+      lwd=2,              # increases line thickness
+      type="l",           # lines with no points
+      pty="s",            # square plotting space
+      xlab="X Variable",  # x label
+      ylab="Y Variable",  # y label
+      ylim=ylim,          # user defined ylimits (adjust for multiple plots)
+      las=1,              # plot axis numbers all horizontal
+      col="brown",        # change line colors
+      cex.lab=2,          # increase label size
+      family="serif",     # use serif font for labels
+      font.lab=2)         # use boldface for labels
+} 
+MyLine() 
+  
+```
+
+*And here are 3 panels illustrating variation in both the slope and the intercept:*
+
+```{r}
+opar <- par(no.readonly=TRUE)
+par(mfrow=c(1,3))
+a <- c(5,20,40) # set different choices for the intercept
+for (i in 1:3){
+  MyLine(a=a[i],ylim=c(0,140))
+}
+  par(opar)
+
+```
+
