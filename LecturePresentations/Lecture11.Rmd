@@ -1,0 +1,44 @@
+---
+title: 'Lecture #11'
+author: "Nicholas J. Gotelli"
+date: "March 15, 2016"
+output: pdf_document
+---
+
+# Improving functions
+
+```{r}
+Growth1 <- function(N_0=100,r=0.1,Time=75){
+  MyVec <- rep(0,Time)
+  MyVec[1] <- N_0
+  for (i in 2:Time){
+    MyVec[i] <- MyVec[i - 1] +r*MyVec[i - 1]
+  }
+  plot(x=1:Time,y=MyVec)
+  return(MyVec)
+}
+Growth1()
+```
+
+```{r}
+Growth2 <- function(N_0=100,r=0.1,Time=75,ret=TRUE){
+  MyVec <- rep(0,Time)
+  MyVec[1] <- N_0
+  for (i in 2:Time){
+    dNdt <- r*MyVec[i - 1] 
+    MyVec[i] <- MyVec[i - 1] + dNdt
+  }
+  plot(x=1:Time,y=MyVec)
+  if(ret==TRUE) return(MyVec)
+}
+Growth2(ret=FALSE)
+```
+
+# Two species growth models
+- create two equations
+- show time trajectory plot of both using `matplot`
+
+# Graph of state space
+- create two columns of N1, N2
+- create growth vector for N1, N2 at each level
+- use `arrows` to show graph
