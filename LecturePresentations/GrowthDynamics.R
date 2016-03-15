@@ -7,7 +7,7 @@
 
 rm(list=ls())
 set.seed(100)
-opar <- par(no.readonly=TRUE)
+# opar <- par(no.readonly=TRUE)
 
 # basic growth model
 #--------------------------------------------------
@@ -64,7 +64,7 @@ plot(x=m$Time,y=m$N)
 plot(x=m$N,y=m$dNdt)
 plot(x=m$N,y=m$perCapdNdt)
 plot(x=m$N,y=rep(r,nrow(m)))
-par(opar)              # restore graphics parameters
+par(mfrow=c(1,1))
 
 # adding process error
 #--------------------------------------------------
@@ -137,5 +137,8 @@ points(x=1:length(Nvec),y=Nvec,type="l",col="red")
   return(Nvec)
   
 }
-Nvec <- Model5(r=0.08,sdR=0.01)
+Nvec 
+Nvec <- Model5(r=0.00,sdR=0.1,lam=4)
+Nvec <- Model5(r=0.00,sdR=0.1,lam=4,meas=2)
 #--------------------------------------------------
+
