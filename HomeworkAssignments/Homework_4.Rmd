@@ -1,0 +1,17 @@
+---
+title: 'Bio 264 Homework #4'
+author: "Nicholas J. Gotelli"
+date: 'Due: 29 March 2016'
+output:
+  pdf_document: default
+  html_document:
+    theme: cerulean
+---
+
+Create a new markdown file called `<Your last name>_HW#4_29Mar2016`. Cut and paste the problems below into Markdown, then add chunks of R code to provide your answers. You will turn in both the `.Rmd` and the `.html` file for this homework assignment.
+
+1. This assignment requires you to read and review some basic ecology material from  your textbook. Chapter 5 of *A Primer of Ecology* (2008, Gotelli, 4th edition) explains the state-space graph for the Lotka-Volterra competition model that we have been building in class. It also covers the algebraic solutions to these equations and describes 4 "cases" in which the outcomes of competition are qualitatively different: Species A always wins, Species B always wins, Species A and B coexist in a stable equilibrium, Species A or Species B wins, depends on starting conditions (unstable equilibrium).
+
+- after reading the text, set up the parameters so that you can recreate an example of each of the 4 cases. Plot the state space graph with the vector fields for each of these 4 cases using your plotting function.
+
+- The text describes in details how *isoclines* are calculated and the fact that the vectors in the state space graph change direction when we cross over isoclines. Read about the `lines` function in R and modify your state space graph to overlay the isoclines, which can be calculated from the input parameters to your function. Now illustrate the 4 cases again, this time showing the vector fields and the isoclines.
