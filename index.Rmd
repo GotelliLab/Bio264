@@ -14,6 +14,12 @@ output:
 Welcome to the homepage for Biology 264. Follow the links below each dated post to pages for course material. The most recent postings are always at the top.
 
 ****
+
+#### 17 March 2016
+
+[Epimodel R Package](http://www.epimodel.org/) from Brandon Ogbunu's guest lecture.
+
+****
 #### 15 March 2016
 
 R scripts for two-species dynamics models:
