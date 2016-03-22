@@ -14,21 +14,22 @@ LV_Comp_SS <- function (ra=0.1,
                         Kb=200,
                      alpha=0.3,
                      beta=0.6,
-                     PopLim=seq(0,100,length=10),
+                     PopLimA=seq(0,100,length=10),
+                     PopLimB=seq(0,100,length=10),
                      ret=TRUE){
-dNadt = rep(0,length(PopLim)^2)
-dNbdt = rep(0,length(PopLim)^2)
+dNadt = rep(0,length(PopLimA)^2)
+dNbdt = rep(0,length(PopLimB)^2)
 z <- 1
-for (i in PopLim) {
-  for (j in PopLim) {
+for (i in PopLimA) {
+  for (j in PopLimB) {
     
   dNadt[z] <- ra*i*((Ka - i - alpha*j)/Ka)
   dNbdt[z] <- rb*j*((Kb - j - beta*i)/Kb)
   z <- z + 1
   }
 }
-x <- rep(PopLim,each=length(PopLim))
-y <-rep(PopLim,length(PopLim))
+x <- rep(PopLimA,each=length(PopLimA))
+y <-rep(PopLimB,length(PopLimB))
 m <- cbind(x,y,dNadt,dNbdt)
 if(ret==TRUE) return(m)
 
@@ -52,7 +53,7 @@ StateSpacePlotter <- function(m,Mag=1,ret=TRUE) {
          y1=m[,2]+m[,4]*Mag,
          length=0.1)
 }
-m <- LV_Comp_SS(PopLim=seq(0,500,length=20),
+m <- LV_Comp_SS(PopLimA=seq(0,500,length=20),PopLimB=seq(0,500,length=20),
                 beta=2)
 StateSpacePlotter(m=m,Mag=0.2)
 
