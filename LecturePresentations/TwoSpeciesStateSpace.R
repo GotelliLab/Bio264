@@ -7,7 +7,8 @@
 # rb = growth rate of species B (constant)
 # alpha = effect of species B on growth of species A
 # beta = effect of species A on growth of species B
-# PopLim = vector of state space sizes
+# PopLimA = vector of starting values for A
+# PopLimB = vector of starting values for B
 LV_Comp_SS <- function (ra=0.1,
                         rb=0.1,
                         Ka=400,
@@ -17,8 +18,8 @@ LV_Comp_SS <- function (ra=0.1,
                      PopLimA=seq(0,100,length=10),
                      PopLimB=seq(0,100,length=10),
                      ret=TRUE){
-dNadt = rep(0,length(PopLimA)^2)
-dNbdt = rep(0,length(PopLimB)^2)
+dNadt = rep(0,length(PopLimA)*length(PopLimB))
+dNbdt = rep(0,length(PopLimB)*length(PopLimA))
 z <- 1
 for (i in PopLimA) {
   for (j in PopLimB) {
@@ -53,7 +54,7 @@ StateSpacePlotter <- function(m,Mag=1,ret=TRUE) {
          y1=m[,2]+m[,4]*Mag,
          length=0.1)
 }
-m <- LV_Comp_SS(PopLimA=seq(0,500,length=20),PopLimB=seq(0,500,length=20),
+m <- LV_Comp_SS(PopLimA=seq(0,500,length=20),PopLimB=seq(0,100,length=20),
                 beta=2)
 StateSpacePlotter(m=m,Mag=0.2)
 
