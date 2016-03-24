@@ -32,3 +32,8 @@ output: pdf_document
 ## Sampling from a vector of values
 - sampling with or without replacement
 - sampling equiprobably or with specified probabilities
+
+
+## Mixture model
+- use for conditional events
+- birds p(finding a nest site)*p(producing offspring)

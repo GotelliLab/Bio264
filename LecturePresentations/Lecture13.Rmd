@@ -1,0 +1,9 @@
+---
+title: 'Lecture #13'
+author: "Nicholas J. Gotelli"
+date: "March 24, 2016"
+output: pdf_document
+---
+
+# Continuous Probability Distributions
+
