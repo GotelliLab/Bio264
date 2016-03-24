@@ -52,7 +52,7 @@ ppois(q=1, lambda=2)
 
 # Therefore for any z, P(lower.tail z) + P(upper.tail z) = 1.0
 z <- 3
-ppois(q=3,lambda=1) + ppois(q=3,lambda=1,lower.tail=FALSE)
+ppois(q=z,lambda=1) + ppois(q=z,lambda=1,lower.tail=FALSE)
 
 MyVec <- ppois(q=seq(0,10),lambda=1,lower.tail=FALSE)
 names(MyVec) <- seq(0,10)
@@ -110,10 +110,10 @@ qpois(p=0.5,lambda=0.1)
 # Use rpois to generate a random set of values from a distribution:
 
 z <- rpois(n=10000,lambda=1)
-hist(z,breaks=10)
+barplot(height=table(z))
 
 z <- rpois(n=10,lambda=1)
-hist(z)
+barplot(height=table(z))
 
 # Make comparisons of sample values with predicted values
 z <- rpois(n=10000,lambda=1) # very large sample
@@ -227,3 +227,28 @@ sample(Species, size=10,replace=TRUE,prob=MyProbs)
 # Case 4: Sampling with specified probabilities, without replacement
 
 sample(Species, size=10,replace=FALSE,prob=MyProbs)
+
+#-------------------------------------------------
+# Creating a mixture model with two processes
+
+# pterr = probability of obtaining a territory
+# clutch = probability distribution for clutch size
+# given that a bird has obtained a territory
+
+# 0-inflated Poisson (a mixture model)
+pterr=0.80
+
+z <- runif(1000)
+clutch <- rpois(1000,lambda=5)
+MyVec <- ifelse(z<pterr,clutch,0)
+barplot(height=table(MyVec))
+
+# standard Poisson
+clutch <- rpois(1000,lambda=2)
+barplot(height=table(clutch))
+
+# 0-truncated Poisson
+clutch <- rpois(1000,lambda=2)
+clutch <- clutch[clutch>0]
+barplot(height=table(clutch))
+
