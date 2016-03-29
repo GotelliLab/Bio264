@@ -1,9 +1,53 @@
 ---
 title: 'Lecture #13'
 author: "Nicholas J. Gotelli"
-date: "March 24, 2016"
+date: "March 29, 2016"
 output: pdf_document
 ---
 
 # Continuous Probability Distributions
 
+## Uniform Distribution
+
+- bounded at both low and high ends
+- "uninformed" prior
+
+## Normal Distribution
+
+- unbounded
+- symmetric
+- separate parameters for mean and variance
+- problematic if mean is small and negative values are not possible
+
+## Gamma Distribution
+
+- bounded by zero, positive values only
+- asymmetric with long right-hand tail
+- shape and scale parameters that together determine mean and variance
+- $mean =shape*scale$
+- $variance = shape*scale^2$
+- continuous counterpart to negative binomial
+- shape = 1 is exponential
+- shape < 1 has mode at 0
+- careful because very small parameters will generate values that round to 0
+
+## Beta distribution
+
+- bounded between 0 and 1
+- closely related to the binomial
+- parameters a, b (both must be non-negative)
+- in binomial trial a = number of successes plus 1
+- b = number of failures plus 1
+- adjust a and b to give the expected value of p
+- larger the absolute values of a and b, the smaller the variance 
+- fractional values of a and b give u shaped distributions
+- a = 1 and b = 1 means no data, so uniform value
+
+## Estimating parameters for distributions
+
+- based on idea of maximum likelihood
+- Plot of theta on x axis
+- Plot of P(data | theta) on y axis
+- Choose value of parameter that maximizes this probability
+- Broad versus narrow peaks in this distribution
+- use `fitdistr` function in `MASS` library
