@@ -36,7 +36,7 @@ Th Mar 31 | ANOVA simulator |  |
 Tu Apr 5 | Regression simulator |  
 Th Apr 7 | Markov Models |  |
 Tu Apr 12 | EXAM III |  |
-Th Apr 14 | guest lecture |  |
+Th Apr 14 | No class |  |
 Tu Apr 19 | Research Presentations |  4:25 - ~ 8:00 pm (dinner)
 Th Apr 21 | Research Presentations |  4:25 - ~ 8:00 pm (dinner)
 Tu Apr 26 | No class |  |
