@@ -3,9 +3,9 @@ title: "Bio 264 Lecture Schedule"
 author: "Nicholas J. Gotelli"
 date: "January 7, 2016"
 output:
-  html_document: default
   pdf_document:
     highlight: tango
+  html_document: default
 fontsize: 10pt
 ---
 
@@ -30,16 +30,16 @@ Th Mar 10 | SPRING BREAK |  |
 Tu Mar 15 | Two-species models |  Homework 6
 Th Mar 17 | guest lecture |  |
 Tu Mar 22 | Two-species models |  Homework 7
-Th Mar 24 | Statistics - contingency tables | Rough draft of project paper due
+Th Mar 24 | Statistics - contingency tables | |
 Tu Mar 29 | Statistics - regression, anova |  Homework 8
-Th Mar 31 | Spatially Explicit Models |  |
-Tu Apr 5 | Individual-based Models |  Homework 9
+Th Mar 31 | ANOVA simulator |  |
+Tu Apr 5 | Regression simulator |  
 Th Apr 7 | Markov Models |  |
 Tu Apr 12 | EXAM III |  |
 Th Apr 14 | guest lecture |  |
-Tu Apr 19 | Research Presentations |  Homework 10
-Th Apr 21 | Research Presentations
-Tu Apr 26 | Research Presentations | Final project paper & slideshow due
-Th Apr 28 | Research Presentations |  |
-Tu May 3 | Research Presentations |  |
+Tu Apr 19 | Research Presentations |  4:25 - ~ 8:00 pm (dinner)
+Th Apr 21 | Research Presentations |  4:25 - ~ 8:00 pm (dinner)
+Tu Apr 26 | No class |  |
+Th Apr 28 | No class |  |
+Tu May 3 | Final project paper & slideshow due |  |
 
