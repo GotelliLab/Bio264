@@ -1,0 +1,37 @@
+---
+title: 'Lecture #14'
+author: "Nicholas J. Gotelli"
+date: "March 31, 2016"
+output: pdf_document
+---
+
+# Analyzing Published Data
+
+# Classification of analyses
+
+- predictor, response variables
+- $y=f(x)$
+- variables continuous,discrete
+
+|  | Continuous Response Variable| Discrete Response Variable
+------------- | ------------- | -----------------
+Continuous Predictor Variable  | Regression | Logistic Regression
+Discrete Predictor Variable | Analysis of Variance (ANOVA)| Contingency Table Analysis
+
+# Get Data From Published Graphs/Tables
+- sample size n (reflects money, time constraints)
+- mean values for groups (reflects "effect size" of treatment difference)
+- standard deviations within groups (reflects variability
+  - distinction between standard deviation and standard error
+
+# Simulate new data sets
+- start with normal
+- later switch to gamma, negative binomial, beta, or other
+
+# Calculate test statistic
+- usually p value
+
+# Explore
+- effects of effect size, sample size, variance
+
+# Use `replicate` to test for power and Type I error
