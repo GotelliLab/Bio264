@@ -1,0 +1,22 @@
+---
+title: 'Lecture #15'
+author: "Nicholas J. Gotelli"
+date: "April 5, 2016"
+output: pdf_document
+---
+
+# Analyzing regression data
+
+- form of function y = a + bx
+- simulate x variable
+- set up parameters
+- adjust and replicate from the sd of random noise
+
+# Analyzing logistic regression
+- fit of model
+- simple plot using predict function
+
+# Analyzing contingency table
+- table function for data
+- chi square analysis
+- mosaic plot for visualization
