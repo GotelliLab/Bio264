@@ -1,0 +1,29 @@
+---
+title: 'Lecture #16'
+author: "Nicholas J. Gotelli"
+date: "April 7, 2016"
+output: pdf_document
+---
+
+# Logit transformation
+- p bounded between 0 and 1
+- problem for a regression line
+- $\mbox{odds ratio}(p) = \frac{p}{1-p}$
+- bounded at $0,\infty$
+- logit transformation = $log(\frac{p}{1-p})$
+- bounded at $-\infty,\infty$
+- intercept log odds ratio at x=0
+- slope = change in log odds ratio with 1 unit change in x
+
+# Analyzing logistic regression
+- fit of model
+- simple plot using predict function
+
+# Getting data in and out of R
+- create an Excel file, open with a text editor
+- create a csv file in Excel, open with `read.csv`
+- create an annotated text file, open with `read.table`
+- show a real annotated text file from Czech group
+
+
+
