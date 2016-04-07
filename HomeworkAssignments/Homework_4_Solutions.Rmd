@@ -1,0 +1,218 @@
+---
+title: "HW4 Bio 264"
+author: "Brian O'Malley"
+date: "March 29, 2016"
+output: pdf_document
+---
+
+1. This assignment requires you to read and review some basic ecology material from your textbook. Chapter 5 of A Primer of Ecology (2008, Gotelli, 4th edition) explains the state-space graph for the Lotka-Volterra competition model that we have been building in class. It also covers the algebraic solutions to these equations and describes 4 "cases" in which the outcomes of competition are qualitatively different: Species A always wins, Species B always wins, Species A and B coexist in a stable equilibrium, Species A or Species B wins, depends on starting conditions (unstable equilibrium).
+
+- after reading the text, set up the parameters so that you can recreate an example of each of the 4 cases. Plot the state space graph with the vector fields for each of these 4 cases using your plotting function.
+
+## Part 1: vector field state-space graphs:
+
+Lotka-Volterra Equations:
+
+$$ \frac{dN_A}{dt}=r_A\cdot N_A\left(\frac{K_A-N_A-\alpha\cdot N_B}{K_A}\right)   $$
+
+$$ \frac{dN_B}{dt}=r_B\cdot N_B\left(\frac{K_B-N_B-\beta\cdot N_A}{K_B}\right)   $$
+
+
+
+**Table 1.** List of parameters for Lotka-Volterra two species model.
+
+Parameter | Definition
+----------|------------
+$K_A$       | carrying capacity for species $A$
+$K_B$       | carrying capacity for species $B$
+$r_A$       | growth rate for species $A$
+$r_B$       | growth rate for species $B$
+$\alpha$    | effect of $B$ on growth of $A$
+$\beta$     | effect of $A$ on growth of $B$
+$N_A$ (i.e. $PopLim_A$)  | vector of starting $A$ values
+$N_B$ (i.e. $PopLim_B$)  | vector of starting $B$ values
+
+
+
+LV model as function in R:
+```{r} 
+LV_Comp_SS <- function(ra=0.1,
+                       rb=0.1,
+                       Ka=400,
+                       Kb=200,
+                       alpha=0.3,
+                       beta=0.6,
+    PopLimA=seq(0,100,length=10),
+    PopLimB=seq(0,100,length=10),
+                        ret=TRUE){
+
+  dNadt<- rep(0,length(PopLimA)*length(PopLimB))
+  dNbdt<- rep(0,length(PopLimA)*length(PopLimB))  
+
+  z<-1 #counter for loop
+  
+  for(i in PopLimA){
+    for(j in PopLimB){
+      #these give the rate of change, ie the arrow vectors in plot space
+      dNadt[z] <- ra*i*((Ka-i-alpha*j)/Ka) #dNadt =ra*Na[(Ka-Na-alpha*Nb)/()]
+      dNbdt[z] <- rb*j*((Kb-j-beta*i)/Kb)  #dNbdt =rb*Nb[(Kb-Na-alpha*Nb)/()]
+
+    z<- z+1
+    }  
+  }  
+  # x y variables to store values
+  x<- rep(PopLimA, each=length(PopLimA))
+  y<- rep(PopLimB, length(PopLimB))
+  m<-cbind(x,y,dNadt,dNbdt)
+  if(ret==TRUE) return(m)
+}
+```
+
+And create a plotting function that can be called to plot output from LV model.
+```{r}
+StateSpacePlotter<- function(m,Mag=0.6,
+                                Ka=400,
+                                Kb=200,
+                             alpha=0.3,
+                              beta=0.6,
+                             title=Mytitle){
+    
+  plot(x=m[,1], 
+       y=m[,2],
+       xlab="Species A", 
+       ylab="Species B",
+       type="n", 
+       main=title)
+
+
+  arrows(x0=m[,1], 
+         y0=m[,2],
+         x1=m[,1] + m[,3]*Mag,
+         y1=m[,2] + m[,4]*Mag,
+         length=0.1)
+  
+}
+```
+
+Plot the state-space vector field of each of the four cases.
+
+```{r, fig.align='center', fig.width=9, fig.height=9, warning=FALSE}
+opar<-par()
+par(mfrow=c(2,2), mar=c(5,5,3,2))
+
+#Case 1: Species A always wins
+case1<-LV_Comp_SS(PopLimA=seq(0,500,length=20),
+              PopLimB=seq(0,500,length=20),
+              Ka=400,Kb=200,alpha=0.3, beta=0.6)
+StateSpacePlotter(m=case1, title="Species A wins")
+
+
+#Case 2: Species B always wins
+case2<-LV_Comp_SS(PopLimA=seq(0,500,length=20),
+              PopLimB=seq(0,500,length=20),
+              Ka=200,Kb=400,alpha=0.6, beta=0.3)
+StateSpacePlotter(m=case2, 
+                  Ka=200,Kb=400,alpha=0.6, beta=0.3,
+                  title="Species B wins")  
+
+
+#Case 3: Species A and B coexist in a stable equilibrium
+case3<-LV_Comp_SS(PopLimA=seq(0,500,length=20),
+              PopLimB=seq(0,500,length=20),
+              Ka=200,Kb=400,alpha=0.3, beta=0.6)
+StateSpacePlotter(m=case3,
+              Ka=200,Kb=400,alpha=0.3, beta=0.6,
+              title="A & B Coexist - Stable")  
+
+
+#Case 4:Species A or Species B wins, depends on starting conditions (unstable equilibrium)
+case4<-LV_Comp_SS(PopLimA=seq(0,500,length=20),
+              PopLimB=seq(0,500,length=20),
+              Ka=500,Kb=500,alpha=2, beta=2)
+StateSpacePlotter(m=case4,
+              Ka=500,Kb=500,alpha=2, beta=2,
+              title="A & B Coexist - Unstable")
+
+opar<-par()
+```
+
+
+## Part 2: Isoclines:
+The text describes in details how isoclines are calculated and the fact that the vectors in the state space graph change direction when we cross over isoclines. Read about the lines function in R and modify your state space graph to overlay the isoclines, which can be calculated from the input parameters to your function. Now illustrate the 4 cases again, this time showing the vector fields and the isoclines.
+
+To do this, I will make a 2 x 2 plot that has the 4 cases. I will assign *red* for Species $A$ isocline, and *blue* for Species $B$ isocline. First I will modify the plotting function to include the `segments` which allows me to add isoclines as segements.   
+
+```{r}
+StateSpaceIsoclines<- function(m,Mag=1,
+                                Ka=400,
+                                Kb=200,
+                             alpha=0.3,
+                              beta=0.6,
+                             title=MyTitle ){
+    
+  plot(x=m[,1], 
+       y=m[,2],
+       #xlab="Species A", 
+       #ylab="Species B",
+       ann.lab=FALSE,
+       type="n", 
+       main=title)
+
+
+  arrows(x0=m[,1], 
+         y0=m[,2],
+         x1=m[,1] + m[,3]*Mag,
+         y1=m[,2] + m[,4]*Mag,
+         length=0.1)
+  
+  segments(x0=0, y0=Ka/alpha, x1=Ka, y1=0, col="red", lwd=2)  # isocline for Spp A
+  segments(x0=0, y0=Kb, x1=Kb/beta,  y1=0, col="blue", lwd=2) # isocline for Spp B
+}
+```
+
+Now to apply the new plotting function to the four cases, such that a 2x2 plot will be created, similar to the one before but this time with **isoclines** for species $A$ & $B$.
+```{r,fig.align='center', fig.width=9, fig.height=9, warning=FALSE}
+# K, alpha, and beta params are same used in plots for Case 1-4 in earlier plots.
+opar<- par()
+par(mfrow=c(2,2),  mar=c(3, 3, 3, 2), oma=c(8,8,6,2))
+
+# Case 1
+StateSpaceIsoclines(m=case1, Mag=0.2,
+                              Ka=400,
+                              Kb=200,
+                           alpha=0.3,
+                            beta=0.6,
+                           title= "Species A wins")
+# Case 2
+StateSpaceIsoclines(m=case2, Mag=0.2,
+                              Ka=200,
+                              Kb=400,
+                           alpha=0.6,
+                            beta=0.3,
+                           title= "Species B wins")
+# Case 3
+StateSpaceIsoclines(m=case3, Mag=0.2,
+                              Ka=200,
+                              Kb=400,
+                           alpha=0.3,
+                            beta=0.6,
+                           title= "A & B Coexist - Stable")
+# Case 4
+StateSpaceIsoclines(m=case4, Mag=0.2,
+                              Ka=500,
+                              Kb=500,
+                           alpha=2,
+                            beta=2,
+                           title= "A & B Coexist - Unstable")
+
+mtext("Species A Abundance", side=1, outer=TRUE, cex=1.2)
+mtext("Species B Abundance", side=2, outer=TRUE, cex=1.2)
+
+par(opar)
+
+legend("top", c("Isocline Spp. A","Isocline Spp. B"), xpd=TRUE, horiz=TRUE, col=c("red","blue"), bty="n", lty=1, lwd=2) 
+
+
+```
+
+End of HW 4.
