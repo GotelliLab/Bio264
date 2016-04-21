@@ -1,0 +1,100 @@
+---
+title: "Exam 4"
+output:
+  pdf_document: default
+  html_document: default
+date: "April 12, 2016"
+---
+
+Create a markdown file in RStudio, and call it `YourLastName_Exam4`. Answer all of the exam questions in this file, with your r code for each problem inserted in a separate chunk. When you are finished, knit the file to an .html document `YourLastName_Exam4.html`. Be sure sure your `.Rmd` file compiles properly, and remember to turn in all of your work before you leave. Turn in the following 3 files:
+
+- `YourLastName_Exam4.Rmd` 
+- `YourLastName_Exam4.html`
+- `YourLastName_Data.csv`
+
+If you are taking the exam in class, bring your files up on a flash drive to transfer to my computer. If you are taking the exam at the ACCESS center, e-mail your files to me at ngotelli@uvm.edu.
+
+*****
+
+1a. Using the beta distribution, create and plot a probability density function with a sharp peak at p=0.70. **(5 points)**
+
+```{r}
+xVal <- seq(0,1,by=0.01)
+beta_pdf <- dbeta(x=xVal,shape1=35,shape2=15)
+plot(x=xVal,y=beta_pdf,
+     type="l",
+     col="steelblue",
+     lwd=3,
+     xlab="p",
+     ylab="probability density")
+```
+
+1b. Calculate the exact 95% confidence interval for this distribution. **(5 points)**
+
+```{r}
+qbeta(p=c(0.025,0.975),shape1=35,shape2=15)
+```
+
+1c. Simulate 100 observations sampled from this beta distribution and illustrate them in histogram plot. **(5 plots)**
+
+```{r}
+betaSim <- rbeta(n=100,shape1=35,shape2=15)
+hist(betaSim,breaks=seq(0,1,by=0.01),col="orchid")
+     
+```
+
+1d. Calculate the 95% confidence interval for these 100 observations. How does this interval compare to the exact interval you calculated in (1b)? **(5 points)**
+
+```{r}
+quantile(betaSim,probs=c(0.025,0.975))
+```
+
+> The two intervals are similar,but not identical. In this case, the interval estimated from the simulated data is a little narrower than the exact interval from the probability density function.
+
+
+2a. Using the normal distribution, simulate data for 3 groups with a sample size of 5 observations in each group. The 3 groups should have different means, but the same standard deviation. Bind the data into a single vector. **(5 points)**
+
+```{r}
+lowData <- rnorm(n=5,mean=10,sd=5)
+medData <- rnorm(n=5,mean=15,sd=5)
+highData <- rnorm(n=5,mean=15,sd=5)
+
+dataVec <- c(lowData,medData,highData)
+
+```
+
+2b. Create a vector of a factors with levels ("low", "medium", and "high"). Combine the data vector and the factor vector into a data frame. Print the first 6 lines of the data frame to confirm that it's structure is correct. **(5 points)** 
+
+```{r}
+myFacs <- factor(rep(c("low","medium","high"),each=5))
+myData <- data.frame(dataVec,myFacs)
+head(myData)
+```
+
+
+2c. Run an analysis of variance on the data in the data frame, and print out the summary of the results. If necessary, adjust the means and standard deviations of the data groups you created in (2a) so that the ANOVA is ***not*** significant (*p* > 0.05). **(5 points)**
+
+```{r}
+myModel <- aov(dataVec~myFacs,data=myData)
+print(summary(myModel))
+```
+
+
+2d. Create a box plot to show the pattern in the data. **(5 points)**
+
+```{r}
+boxplot(dataVec~myFacs,data=myData,col="wheat")
+```
+
+3a. Using RStudio (create a new Text File, but save as `YourLastName_Data.csv`) or Excel (create a new Excel worksheet and save as a `.csv` file format with the name `YourLastName_Data.csv`), create a data file with two columns, "varX" and "varY". Fill each column with 6 integers. Add a touch of whimsical metadata annotation to the file. Make sure you save the data file in the same location as your `.Rmd` file. **(5 points)**
+
+3b. Read the data into R from the `.csv` file, and analyze it with a simple linear regression model. Print the summary of the regression model. **(5 points)**
+
+```{r}
+FakeData <- read.table("Gotelli_Data.csv",
+           header=TRUE, 
+           sep=",")
+
+summary(lm(varY~varX,data=FakeData))
+```
+
